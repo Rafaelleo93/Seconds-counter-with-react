@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import SecondsCounter from "../component/SecondsCounter.jsx";
+import HoursCounter from "./HoursCounter.jsx";
+
+
 
 //create your first component
 const Home = () => {
@@ -47,6 +50,14 @@ const Home = () => {
 		}, 1000);
 		return () => clearInterval(interval);
 	});
+	const comienzo=()=>{
+        setCount(0);
+        setCount2(0);
+        setCount3(0);
+        setCount4(0);
+        setCount5(0);
+        setCount6(0);
+    }
 
 	return (
 		<div className="p-3">
@@ -58,7 +69,15 @@ const Home = () => {
 				<SecondsCounter numero={count3} />
 				<SecondsCounter numero={count2} />
 				<SecondsCounter numero={count} />
+			<div className="col p-3 bg-dark m-1 rounded d-flex justify-content-center">
+			<button className="restart" onClick={comienzo}>Restart</button>
 			</div>
+			</div>
+			
+			<div className="d-flex justify-content-center"> 
+				<HoursCounter/>
+			</div>
+				
 		</div>
 	);
 };

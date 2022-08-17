@@ -1,10 +1,11 @@
 import React from "react";
 import propTypes from "prop-types";
 
+
 const SecondsCounter = (props) => {
 	return (
 		<div
-			className="col text-white bg-dark m-1">
+			className="col text-white bg-dark m-1 rounded">
 			<div className="card-body d-flex justify-content-center">
 				<h1 className="card-title">
 					{props.icono}
